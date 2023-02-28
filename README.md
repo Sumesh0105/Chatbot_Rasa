@@ -10,6 +10,14 @@ The following is the proposed workflow for the chatbot:
 - After the flow ends, if the user requests for "more operations", the chatbot will take the new inputs and proceed.
 - The chatbot will also accept the mathematical query as a single sentence.
 
+# Supported Mathematical Operations
+The Math Operation Chatbot currently supports the following mathematical operations:
+
+- Addition (+)
+- Subtraction (-)
+- Multiplication (*)
+- Division (/)
+
 # Output
 # Sample 1: If the user only provides the operator name, the chatbot will request the user to enter two operands separately.
 ![maths_operation1](https://user-images.githubusercontent.com/113231945/221856812-ae6dbf29-fe95-428e-a095-b0aa6cfe1f64.png)

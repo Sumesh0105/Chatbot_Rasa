@@ -16,7 +16,6 @@ intents:
   - operand1
   - operand2
   - operator
-  #- perform_calculation
   - sample_cases
 
 entities:
@@ -31,47 +30,7 @@ entities:
 actions:
   - action_numbers
   - action_math_operation
-
-# forms:
-#   calculation_forms:
-#     required_slots:
-#       - operator
-#       - operand1
-#       - operand2
-# slots:
-#   operator:
-#     type: text
-#   operand1:
-#     type: text
-#   operand2:
-#     type: text
-
-# slots:
-#   operator:
-#     type: text
-#     influence_conversation: true
-#     mappings: 
-#       - type: from_text
-#         conditions:
-#         - active_loop: calculation_forms
-#           requested_slot: operator
-#   operand1:
-#     type: float
-#     influence_conversation: true
-#     mappings: 
-#       - type: from_text
-#         conditions:
-#         - active_loop: calculation_forms
-#           requested_slot: operand1
-#   operand2:
-#     type: float
-#     influence_conversation: true
-#     mappings: 
-#       - type: from_text
-#         conditions:
-#         - active_loop: calculation_forms
-#           requested_slot: operand2
-        
+     
 
 slots:
   operand1:
@@ -93,14 +52,6 @@ slots:
       - type: from_entity
         entity: operator
 
-# slots:
-#   num1:
-#     type: unfeaturized
-#   num2:
-#     type: unfeaturized
-#   operator:
-#     type: unfeaturized
-
 
 
 responses:
@@ -120,14 +71,16 @@ responses:
   - text: "I can do operations like Addition, Subtraction, Multiplication and Division. Do select any one from this."
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
+  - text: "Don't be Upset.. here are few fun facts regarding maths, read and have fun: \n =>The word “hundred” comes from the old Norse term, “hundrath”, which actually means 120 and not 100.
+\n =>In a room of 23 people there's a 50% chance that two people have the same birthday.
+\n =>Most mathematical symbols weren't invented until the 16th century."
 
   utter_sample_cases:
   - text: "add 10 and 5\ndifference between 10 and 5\nproduct of 10 and 5\nDivision of 10 by 5" 
 
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Great, That's good to hear!"
 
   utter_goodbye:
   - text: "Bye.. See you Soon! :)"

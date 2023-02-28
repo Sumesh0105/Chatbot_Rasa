@@ -17,13 +17,6 @@ nlu:
     - goodevening
     - good afternoon
 
-# - intent: request_statement
-#   examples: |
-#     - what are the operations you can do?
-#     - what is your purpose?
-#     - do another operations
-#     - start another operation
-#     - i need to do mathematical operations
 
 
 - intent: goodbye

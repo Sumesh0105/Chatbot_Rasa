@@ -1,0 +1,182 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+# - intent: request_statement
+#   examples: |
+#     - what are the operations you can do?
+#     - what is your purpose?
+#     - do another operations
+#     - start another operation
+#     - i need to do mathematical operations
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: add_numbers
+  examples: |
+    - Can you [add](operation) [5](number1) and [10](number2) for me?
+    - What is [15](number1) [plus](operation) [20](number2)?
+    - I want to [add](operation) [3](number1) and [7](number2)
+    - [sum](operation) of [5](number1) and [7](number2)?
+
+- intent: sub_numbers
+  examples: |
+    - Can you [subtract](operation) [5](number1) and [10](number2) for me?
+    - What is [15](number1) [minus](operation) [20](number2)?
+    - I want to [subtract](operation) [3](number1) and [7](number2)
+    - [difference](operation) of [5](number1) and [7](number2)?
+
+- intent: mult_numbers
+  examples: |
+    - Can you [multiply](operation) [5](number1) and [10](number2) for me?
+    - What is [15](number1) [times of](operation) [20](number2)?
+    - I want to [multiply](operation) [3](number1) and [7](number2)
+    - [product](operation) of [5](number1) and [7](number2)?
+
+- intent: div_numbers
+  examples: |
+    - Can you [divide](operation) [5](number1) and [10](number2) for me?
+    - What is [15](number1) [divided by](operation) [20](number2)?
+    - I want to [divide](operation) [3](number1) and [7](number2)
+    - [division](operation) of [5](number1) and [7](number2)?
+    - [divide](operation) [10](number1) by [5](number2)
+
+- intent: sample_cases
+  examples: |
+    - what are the sample inputs?
+    - how to type the question?
+    - help
+    - give me the syntax.
+    - input formats
+
+- intent: operand1
+  examples: |
+    - operand1 [12](operand1)
+    - operand1 [82](operand1)
+    - operand1 [98](operand1)
+    - operand1 [77](operand1)
+    - operand1 [56](operand1)
+    - operand1 [1](operand1)
+    - operand1 [\d](operand1)
+
+- intent: operand2
+  examples: |
+    - operand2 [\d](operand2)
+    - operand2 [45](operand2)
+    - operand2 [78](operand2)
+    - operand2 [56](operand2)
+    - operand2 [89](operand2)
+    - operand2 [12](operand2)
+    - operand1 [\d](operand2)
+
+
+- intent: operator
+  examples: |
+   - [addition](operator)
+   - [subtraction](operator)
+   - [division](operator)
+   - [multiplication](operator)
+
+- intent: problem_statement
+  examples: |
+   - need to do operations
+   - another operations
+   - continue for next inputs
+   - continue
+   - dont stop. loop it
+   - what are the operations you can do?
+   - what is your purpose?
+   - do another operations
+   - start another operation
+   - i need to do mathematical operations
+
+
+  
+

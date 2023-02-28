@@ -1,0 +1,157 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - add_numbers
+  - sub_numbers
+  - mult_numbers
+  - div_numbers
+  - problem_statement
+  - operand1
+  - operand2
+  - operator
+  #- perform_calculation
+  - sample_cases
+
+entities:
+  - number1
+  - number2
+  - operation
+  - operand1
+  - operand2
+  - operator
+  
+
+actions:
+  - action_numbers
+  - action_math_operation
+
+# forms:
+#   calculation_forms:
+#     required_slots:
+#       - operator
+#       - operand1
+#       - operand2
+# slots:
+#   operator:
+#     type: text
+#   operand1:
+#     type: text
+#   operand2:
+#     type: text
+
+# slots:
+#   operator:
+#     type: text
+#     influence_conversation: true
+#     mappings: 
+#       - type: from_text
+#         conditions:
+#         - active_loop: calculation_forms
+#           requested_slot: operator
+#   operand1:
+#     type: float
+#     influence_conversation: true
+#     mappings: 
+#       - type: from_text
+#         conditions:
+#         - active_loop: calculation_forms
+#           requested_slot: operand1
+#   operand2:
+#     type: float
+#     influence_conversation: true
+#     mappings: 
+#       - type: from_text
+#         conditions:
+#         - active_loop: calculation_forms
+#           requested_slot: operand2
+        
+
+slots:
+  operand1:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: operand1
+  operand2:
+    type: float
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: operand2
+  operator:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: operator
+
+# slots:
+#   num1:
+#     type: unfeaturized
+#   num2:
+#     type: unfeaturized
+#   operator:
+#     type: unfeaturized
+
+
+
+responses:
+  utter_greet:
+  - text: "Hey! I am Equato a calculator bot!\nHow can i help you?"
+
+  utter_input_operator:
+  - text: "Enter the operation"
+ 
+  utter_input_operand1:
+  - text: "Enter the operand1 (eg format: operand1 23 )"
+
+  utter_input_operand2:
+  - text: "Enter the operand2 (eg format: operand2 23 )"
+
+  utter_problem_statement:
+  - text: "I can do operations like Addition, Subtraction, Multiplication and Division. Do select any one from this."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+
+  utter_sample_cases:
+  - text: "add 10 and 5\ndifference between 10 and 5\nproduct of 10 and 5\nDivision of 10 by 5" 
+
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye.. See you Soon! :)"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_addition_result:
+  - text: "The result of adding {num1} and {num2} is {result}."
+
+  utter_subtraction_result:
+  - text: "The result of subtracting {num1} from {num2} is {result}."
+
+  utter_multiplication_result:
+  - text: "The result of multiplication of {num1} and {num2} is {result}."
+
+  utter_divition_result:
+  - text: "The result of division of {num1} and {num2} is {result}."
+
+  utter_result:
+  - text: "The {operation} of {operand1} and {operand2}  is {result}."
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

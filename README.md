@@ -8,6 +8,7 @@ The following is the proposed workflow for the chatbot:
 - The chatbot will show the available mathematical operations to the user, using a simple menu-based approach. The available categories will include "addition", "subtraction", "multiplication", and "division".
 - Based on the user's input, the chatbot will show the output to the user.
 - After the flow ends, if the user requests for "more operations", the chatbot will take the new inputs and proceed.
+- The chatbot will also accept the mathematical query as a single sentence.
 
 # Output
 # Sample 1: If the user only provides the operator name, the chatbot will request the user to enter two operands separately.
